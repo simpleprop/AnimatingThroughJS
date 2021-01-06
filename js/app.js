@@ -1,19 +1,10 @@
-// When the button is pressed 
-$('.spoiler').on('click', 'button', function(){
-  //Show the spoiler text
-  $(this).prev().show();
-  //Hide the "Reveal Spoiler" button
-  $(this).hide();
+$('.spoiler').hide();
+$('.spoiler2').hide();
+$('.spoilerButton').on('click', function () {
+  $('.spoilerButton').slideUp();
+  $('.spoiler').slideDown(400);
 });
-
-// Create the "Reveal Spoiler" button
-const $button = $('<button>Reveal Spoiler</button>');
-//Append to web page
-$('.spoiler').append($button);
-
-//Hide the spoiler text
-$('.spoiler span').hide();
-
-
-
-
+$('.spoilerButton2').on('click', function () {
+  $('.spoilerButton2').slideUp();
+  $('.spoiler2').slideDown(400);
+});
